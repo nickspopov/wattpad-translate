@@ -14,10 +14,9 @@ enum WattpadError: Error {
     case networkError
 }
 
-
-struct WattpadInfo: Identifiable {
-    var id = UUID()
-    var link: String
+struct WattpadPageInfo {
+    var text: String
+    var nextPageLink: String?
 }
 
 class WattpadService {
@@ -38,12 +37,15 @@ class WattpadService {
         }
     }
     
-    func getLinkToNextPage(textHtml: String) {
+    func getLinkToNextPage(textHtml: String, completeHandler: @escaping (String?, Error?) -> Void) {
         do {
             let doc = try SwiftSoup.parse(textHtml)
             let buttonContainer = try doc.getElementById("story-part-navigation")
             let link = try buttonContainer?.children()[0].attr("href")
-        } catch {}
+            completeHandler(link!, nil)
+        } catch {
+            completeHandler(nil, WattpadError.parseError)
+        }
     }
     
     func getText(byString: String, completeHandler: @escaping (String?, Error?) -> Void) {
@@ -51,12 +53,31 @@ class WattpadService {
             AF.request(byString)
                 .responseString { data in
                     let textHtml = data.value!
-                    self.getLinkToNextPage(textHtml: textHtml)
                     self.parseHtml(textHtml: textHtml) { data, error in
                         guard let _data = data else {
                             return completeHandler(nil, error)
                         }
                         completeHandler(_data, error)
+                    }
+                }
+        }
+    }
+    
+    func getPageInfo(byString: String, completeHandler: @escaping (WattpadPageInfo?, Error?) -> Void) {
+        Task {
+            AF.request(byString)
+                .responseString { data in
+                    let textHtml = data.value!
+                    self.parseHtml(textHtml: textHtml) { text, error in
+                        guard let _text = text else {
+                            return completeHandler(nil, error)
+                        }
+                        self.getLinkToNextPage(textHtml: textHtml) { nextPageLink, getLinkError in
+                            guard let _nextPageLink = nextPageLink else {
+                                return completeHandler(WattpadPageInfo(text: _text), nil)
+                            }
+                            return completeHandler(WattpadPageInfo(text: _text, nextPageLink: _nextPageLink), nil)
+                        }
                     }
                 }
         }

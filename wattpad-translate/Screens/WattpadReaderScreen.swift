@@ -10,21 +10,21 @@ import SwiftUI
 struct WattpadReaderScreen: View {
     var linkString: String
     
-    @Binding var wattpadInfoState: WattpadInfo?
-    
     @State private var text: String? = nil
     @State private var errorState: Error? = nil
     @State private var loading: Bool = true
+    @State private var nextPageLink: String? = nil
     
     
     func scrapeLink() {
         text = nil
         errorState = nil
-        WattpadService.shared.getText(byString: linkString) { data, error in
+        WattpadService.shared.getPageInfo(byString: linkString) { data, error in
             if let _data = data {
-                TranslateService.shared.translate(text: _data) { translatedText, translateError in
+                TranslateService.shared.translate(text: _data.text) { translatedText, translateError in
                     if let _translatedText = translatedText {
                         text = _translatedText
+                        nextPageLink = _data.nextPageLink
                     }
                 }
             }
@@ -35,32 +35,32 @@ struct WattpadReaderScreen: View {
         }
     }
     
-    func goToNextPage() {
-        wattpadInfoState = WattpadInfo(link: "https://www.wattpad.com/768296833-g-t-short-stories-1-completed-new-life-pt-2")
-    }
-    
     var body: some View {
-        ScrollView {
-            if loading {
-                ProgressView()
+        NavigationView{
+            ScrollView {
+                if loading {
+                    ProgressView()
+                }
+                if text?.count ?? 0 > 0 {
+                    Text(text!)
+                }
+                if errorState != nil {
+                    Text("Error").foregroundColor(.red)
+                }
+                if !(nextPageLink?.isEmpty ?? true) {
+                    NavigationLink("Go to next page") {
+                        WattpadReaderScreen(linkString: nextPageLink!)
+                    }
+                }
             }
-            if text?.count ?? 0 > 0 {
-                Text(text!)
-            }
-            if errorState != nil {
-                Text("Error").foregroundColor(.red)
-            }
-            Button(action: goToNextPage) {
-                Text("Next Page!")
-            }
+            .onAppear(perform: scrapeLink)
+            .padding()
         }
-        .onAppear(perform: scrapeLink)
-        .padding()
     }
 }
 
 struct WattpadReaderScreen_Previews: PreviewProvider {
     static var previews: some View {
-        WattpadReaderScreen(linkString: "https://www.wattpad.com/1297832299-the-remarried-empress-chapter-1-a-fallen-empress", wattpadInfoState: .constant(WattpadInfo(link: "https://www.wattpad.com/1297832299-the-remarried-empress-chapter-1-a-fallen-empress")))
+        WattpadReaderScreen(linkString: WattpadService.dummyLink1)
     }
 }

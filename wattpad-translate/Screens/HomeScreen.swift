@@ -7,12 +7,17 @@
 
 import SwiftUI
 
+struct WattpadSheetState: Identifiable {
+    var id = UUID()
+    var link: String
+}
+
 struct HomeScreen: View {
-    @State var wattpadInfoState: WattpadInfo? = nil
-    @State var link: String = ""
+    @State var wattpadSheetState: WattpadSheetState? = nil
+    @State var searchLink: String = ""
     
     func openSheet() {
-        wattpadInfoState = WattpadInfo(link: self.link)
+        wattpadSheetState = WattpadSheetState(link: self.searchLink)
     }
     
     var body: some View {
@@ -22,10 +27,10 @@ struct HomeScreen: View {
                     Text("Go!")
                 }
             }
-            .sheet(item: $wattpadInfoState) { wattpadInfo in
-                WattpadReaderScreen(linkString: wattpadInfo.link, wattpadInfoState: $wattpadInfoState)
+            .sheet(item: $wattpadSheetState) { wattpadInfo in
+                WattpadReaderScreen(linkString: wattpadInfo.link)
             }
-        }.searchable(text: $link)
+        }.searchable(text: $searchLink)
     }
 }
 
