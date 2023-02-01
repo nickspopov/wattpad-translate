@@ -19,12 +19,12 @@ struct WattpadReaderScreen: View {
     func scrapeLink() {
         text = nil
         errorState = nil
-        WattpadService.shared.getPageInfo(byString: linkString) { data, error in
+        WattpadService.shared.getPageInfo(byStringRecursive: linkString) { data, error in
             if let _data = data {
                 TranslateService.shared.translate(text: _data.text) { translatedText, translateError in
                     if let _translatedText = translatedText {
                         text = _translatedText
-                        nextPageLink = _data.nextPageLink
+                        nextPageLink = _data.nextChapterLink
                     }
                 }
             }
