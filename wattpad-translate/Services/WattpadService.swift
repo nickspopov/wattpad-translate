@@ -32,9 +32,9 @@ class WattpadService {
         }
     }
     
-    func getText(byLink: URL, completeHandler: @escaping (String?, Error?) -> Void) {
+    func getText(byString: String, completeHandler: @escaping (String?, Error?) -> Void) {
         Task {
-            AF.request(byLink)
+            AF.request(byString)
                 .responseString { data in
                     let textHtml = data.value!
                     self.parseHtml(textHtml: textHtml) { data, error in

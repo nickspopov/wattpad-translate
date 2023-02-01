@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B895D06298A65C300AFBD46 /* TranslateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895D05298A65C300AFBD46 /* TranslateService.swift */; };
+		4B895D0A298A88A200AFBD46 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895D09298A88A200AFBD46 /* HomeScreen.swift */; };
+		4B895D0C298A892700AFBD46 /* WattpadReaderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895D0B298A892700AFBD46 /* WattpadReaderScreen.swift */; };
 		4BA426742989D219004C1B0D /* wattpad_translateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA426732989D219004C1B0D /* wattpad_translateApp.swift */; };
 		4BA426762989D219004C1B0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA426752989D219004C1B0D /* ContentView.swift */; };
 		4BA426782989D21A004C1B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA426772989D21A004C1B0D /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		20DF7A19180B0B64F29F3FA3 /* Pods-wattpad-translate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wattpad-translate.release.xcconfig"; path = "Target Support Files/Pods-wattpad-translate/Pods-wattpad-translate.release.xcconfig"; sourceTree = "<group>"; };
 		4B895D05298A65C300AFBD46 /* TranslateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
+		4B895D09298A88A200AFBD46 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		4B895D0B298A892700AFBD46 /* WattpadReaderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WattpadReaderScreen.swift; sourceTree = "<group>"; };
 		4BA426702989D219004C1B0D /* wattpad-translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wattpad-translate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA426732989D219004C1B0D /* wattpad_translateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wattpad_translateApp.swift; sourceTree = "<group>"; };
 		4BA426752989D219004C1B0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +60,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4B895D08298A889300AFBD46 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4B895D09298A88A200AFBD46 /* HomeScreen.swift */,
+				4B895D0B298A892700AFBD46 /* WattpadReaderScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		4BA426672989D219004C1B0D = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +90,7 @@
 		4BA426722989D219004C1B0D /* wattpad-translate */ = {
 			isa = PBXGroup;
 			children = (
+				4B895D08298A889300AFBD46 /* Screens */,
 				4B895D04298A659A00AFBD46 /* ViewModel */,
 				4BA426812989D26B004C1B0D /* Services */,
 				4BA426732989D219004C1B0D /* wattpad_translateApp.swift */,
@@ -227,7 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B895D0C298A892700AFBD46 /* WattpadReaderScreen.swift in Sources */,
 				4B895D06298A65C300AFBD46 /* TranslateService.swift in Sources */,
+				4B895D0A298A88A200AFBD46 /* HomeScreen.swift in Sources */,
 				4BA426762989D219004C1B0D /* ContentView.swift in Sources */,
 				4BA426742989D219004C1B0D /* wattpad_translateApp.swift in Sources */,
 				4BA426832989D286004C1B0D /* WattpadService.swift in Sources */,
