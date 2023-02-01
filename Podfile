@@ -7,5 +7,6 @@ target 'wattpad-translate' do
 
   pod 'Alamofire'
   pod 'SwiftSoup'
+  pod 'GoogleMLKit/Translate', '3.2.0'
 
 end

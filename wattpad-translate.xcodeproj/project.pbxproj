@@ -139,6 +139,7 @@
 				4BA4266D2989D219004C1B0D /* Frameworks */,
 				4BA4266E2989D219004C1B0D /* Resources */,
 				41F4132C7EE84D17C654FDCB /* [CP] Embed Pods Frameworks */,
+				A211DB4BC493F093C08771CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +211,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wattpad-translate/Pods-wattpad-translate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A211DB4BC493F093C08771CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wattpad-translate/Pods-wattpad-translate-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wattpad-translate/Pods-wattpad-translate-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wattpad-translate/Pods-wattpad-translate-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C33307EAA248D8FDBBE0566E /* [CP] Check Pods Manifest.lock */ = {

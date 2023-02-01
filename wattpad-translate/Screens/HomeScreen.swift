@@ -7,27 +7,25 @@
 
 import SwiftUI
 
-struct WattpadInfo: Identifiable {
-    var id = UUID()
-    var link: String
-}
-
 struct HomeScreen: View {
     @State var wattpadInfoState: WattpadInfo? = nil
+    @State var link: String = ""
     
     func openSheet() {
-        wattpadInfoState = WattpadInfo(link: "https://www.wattpad.com/1297832299-the-remarried-empress-chapter-1-a-fallen-empress")
+        wattpadInfoState = WattpadInfo(link: self.link)
     }
     
     var body: some View {
-        VStack {
-            Button(action: openSheet) {
-                Text("Go!")
+        NavigationView{
+            VStack {
+                Button(action: openSheet) {
+                    Text("Go!")
+                }
             }
-        }
-        .sheet(item: $wattpadInfoState) { _wattpadInfo in
-            WattpadReaderScreen(linkString: _wattpadInfo.link)
-        }
+            .sheet(item: $wattpadInfoState) { wattpadInfo in
+                WattpadReaderScreen(linkString: wattpadInfo.link, wattpadInfoState: $wattpadInfoState)
+            }
+        }.searchable(text: $link)
     }
 }
 
