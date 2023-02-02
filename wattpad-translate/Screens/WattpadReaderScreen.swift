@@ -36,26 +36,24 @@ struct WattpadReaderScreen: View {
     }
     
     var body: some View {
-        NavigationView{
-            ScrollView {
-                if loading {
-                    ProgressView()
-                }
-                if text?.count ?? 0 > 0 {
-                    Text(text!)
-                }
-                if errorState != nil {
-                    Text("Error").foregroundColor(.red)
-                }
-                if !(nextPageLink?.isEmpty ?? true) {
-                    NavigationLink("Go to next page") {
-                        WattpadReaderScreen(linkString: nextPageLink!)
-                    }
+        ScrollView {
+            if loading {
+                ProgressView()
+            }
+            if text?.count ?? 0 > 0 {
+                Text(text!)
+            }
+            if errorState != nil {
+                Text("Error").foregroundColor(.red)
+            }
+            if !(nextPageLink?.isEmpty ?? true) {
+                NavigationLink("Go to next page") {
+                    WattpadReaderScreen(linkString: nextPageLink!)
                 }
             }
-            .onAppear(perform: scrapeLink)
-            .padding()
         }
+        .onAppear(perform: scrapeLink)
+        .padding()
     }
 }
 

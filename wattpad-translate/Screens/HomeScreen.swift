@@ -28,7 +28,9 @@ struct HomeScreen: View {
                 }
             }
             .sheet(item: $wattpadSheetState) { wattpadInfo in
-                WattpadReaderScreen(linkString: wattpadInfo.link)
+                NavigationView{
+                    WattpadReaderScreen(linkString: wattpadInfo.link)
+                }
             }
         }.searchable(text: $searchLink)
     }
