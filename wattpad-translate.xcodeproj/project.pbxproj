@@ -15,8 +15,36 @@
 		4BA426782989D21A004C1B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA426772989D21A004C1B0D /* Assets.xcassets */; };
 		4BA4267B2989D21A004C1B0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA4267A2989D21A004C1B0D /* Preview Assets.xcassets */; };
 		4BA426832989D286004C1B0D /* WattpadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA426822989D286004C1B0D /* WattpadService.swift */; };
+		4BB28AC4298BF24100A45746 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB28AC3298BF24100A45746 /* ShareViewController.swift */; };
+		4BB28AC7298BF24100A45746 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB28AC5298BF24100A45746 /* MainInterface.storyboard */; };
+		4BB28ACB298BF24100A45746 /* share-extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4BB28AC1298BF24100A45746 /* share-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4BB28AD4298BFADD00A45746 /* ConstantsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB28AD3298BFADD00A45746 /* ConstantsService.swift */; };
 		D256E9269CEDBF47297C4633 /* Pods_wattpad_translate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7541DB07B2689F28F9E2069 /* Pods_wattpad_translate.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BB28AC9298BF24100A45746 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BA426682989D219004C1B0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BB28AC0298BF24100A45746;
+			remoteInfo = "share-extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4BB28ACC298BF24100A45746 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4BB28ACB298BF24100A45746 /* share-extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		20DF7A19180B0B64F29F3FA3 /* Pods-wattpad-translate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wattpad-translate.release.xcconfig"; path = "Target Support Files/Pods-wattpad-translate/Pods-wattpad-translate.release.xcconfig"; sourceTree = "<group>"; };
@@ -29,6 +57,14 @@
 		4BA426772989D21A004C1B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BA4267A2989D21A004C1B0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4BA426822989D286004C1B0D /* WattpadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WattpadService.swift; sourceTree = "<group>"; };
+		4BB28AC1298BF24100A45746 /* share-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "share-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB28AC3298BF24100A45746 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		4BB28AC6298BF24100A45746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4BB28AC8298BF24100A45746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BB28AD0298BF78700A45746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4BB28AD1298BFA4B00A45746 /* wattpad-translate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "wattpad-translate.entitlements"; sourceTree = "<group>"; };
+		4BB28AD2298BFA6300A45746 /* share-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "share-extension.entitlements"; sourceTree = "<group>"; };
+		4BB28AD3298BFADD00A45746 /* ConstantsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsService.swift; sourceTree = "<group>"; };
 		E7541DB07B2689F28F9E2069 /* Pods_wattpad_translate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wattpad_translate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB94053FEF7F989EF5CA0D4A /* Pods-wattpad-translate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wattpad-translate.debug.xcconfig"; path = "Target Support Files/Pods-wattpad-translate/Pods-wattpad-translate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +75,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D256E9269CEDBF47297C4633 /* Pods_wattpad_translate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BB28ABE298BF24100A45746 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				4BA426722989D219004C1B0D /* wattpad-translate */,
+				4BB28AC2298BF24100A45746 /* share-extension */,
 				4BA426712989D219004C1B0D /* Products */,
 				BB92C23EA0455C6F834888FA /* Pods */,
 				094466B5E6AD091877E26A13 /* Frameworks */,
@@ -83,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				4BA426702989D219004C1B0D /* wattpad-translate.app */,
+				4BB28AC1298BF24100A45746 /* share-extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +135,8 @@
 		4BA426722989D219004C1B0D /* wattpad-translate */ = {
 			isa = PBXGroup;
 			children = (
+				4BB28AD1298BFA4B00A45746 /* wattpad-translate.entitlements */,
+				4BB28AD0298BF78700A45746 /* Info.plist */,
 				4B895D08298A889300AFBD46 /* Screens */,
 				4B895D04298A659A00AFBD46 /* ViewModel */,
 				4BA426812989D26B004C1B0D /* Services */,
@@ -114,8 +161,20 @@
 			children = (
 				4BA426822989D286004C1B0D /* WattpadService.swift */,
 				4B895D05298A65C300AFBD46 /* TranslateService.swift */,
+				4BB28AD3298BFADD00A45746 /* ConstantsService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4BB28AC2298BF24100A45746 /* share-extension */ = {
+			isa = PBXGroup;
+			children = (
+				4BB28AD2298BFA6300A45746 /* share-extension.entitlements */,
+				4BB28AC3298BF24100A45746 /* ShareViewController.swift */,
+				4BB28AC5298BF24100A45746 /* MainInterface.storyboard */,
+				4BB28AC8298BF24100A45746 /* Info.plist */,
+			);
+			path = "share-extension";
 			sourceTree = "<group>";
 		};
 		BB92C23EA0455C6F834888FA /* Pods */ = {
@@ -140,15 +199,34 @@
 				4BA4266E2989D219004C1B0D /* Resources */,
 				41F4132C7EE84D17C654FDCB /* [CP] Embed Pods Frameworks */,
 				A211DB4BC493F093C08771CE /* [CP] Copy Pods Resources */,
+				4BB28ACC298BF24100A45746 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4BB28ACA298BF24100A45746 /* PBXTargetDependency */,
 			);
 			name = "wattpad-translate";
 			productName = "wattpad-translate";
 			productReference = 4BA426702989D219004C1B0D /* wattpad-translate.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4BB28AC0298BF24100A45746 /* share-extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BB28ACF298BF24100A45746 /* Build configuration list for PBXNativeTarget "share-extension" */;
+			buildPhases = (
+				4BB28ABD298BF24100A45746 /* Sources */,
+				4BB28ABE298BF24100A45746 /* Frameworks */,
+				4BB28ABF298BF24100A45746 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "share-extension";
+			productName = "share-extension";
+			productReference = 4BB28AC1298BF24100A45746 /* share-extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -161,6 +239,9 @@
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					4BA4266F2989D219004C1B0D = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					4BB28AC0298BF24100A45746 = {
 						CreatedOnToolsVersion = 14.0;
 					};
 				};
@@ -179,6 +260,7 @@
 			projectRoot = "";
 			targets = (
 				4BA4266F2989D219004C1B0D /* wattpad-translate */,
+				4BB28AC0298BF24100A45746 /* share-extension */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +272,14 @@
 			files = (
 				4BA4267B2989D21A004C1B0D /* Preview Assets.xcassets in Resources */,
 				4BA426782989D21A004C1B0D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BB28ABF298BF24100A45746 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BB28AC7298BF24100A45746 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +354,39 @@
 				4B895D0A298A88A200AFBD46 /* HomeScreen.swift in Sources */,
 				4BA426762989D219004C1B0D /* ContentView.swift in Sources */,
 				4BA426742989D219004C1B0D /* wattpad_translateApp.swift in Sources */,
+				4BB28AD4298BFADD00A45746 /* ConstantsService.swift in Sources */,
 				4BA426832989D286004C1B0D /* WattpadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4BB28ABD298BF24100A45746 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BB28AC4298BF24100A45746 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BB28ACA298BF24100A45746 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BB28AC0298BF24100A45746 /* share-extension */;
+			targetProxy = 4BB28AC9298BF24100A45746 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4BB28AC5298BF24100A45746 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BB28AC6298BF24100A45746 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4BA4267C2989D21A004C1B0D /* Debug */ = {
@@ -389,18 +507,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB94053FEF7F989EF5CA0D4A /* Pods-wattpad-translate.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "wattpad-translate/wattpad-translate.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wattpad-translate/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "wattpad-translate/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,18 +539,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20DF7A19180B0B64F29F3FA3 /* Pods-wattpad-translate.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "wattpad-translate/wattpad-translate.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wattpad-translate/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "wattpad-translate/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +561,56 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "raccoon.apps.wattpad-translate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4BB28ACD298BF24100A45746 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "share-extension/share-extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "share-extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "share-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "raccoon.apps.wattpad-translate.share-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BB28ACE298BF24100A45746 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "share-extension/share-extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "share-extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "share-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "raccoon.apps.wattpad-translate.share-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,6 +634,15 @@
 			buildConfigurations = (
 				4BA4267F2989D21A004C1B0D /* Debug */,
 				4BA426802989D21A004C1B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BB28ACF298BF24100A45746 /* Build configuration list for PBXNativeTarget "share-extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BB28ACD298BF24100A45746 /* Debug */,
+				4BB28ACE298BF24100A45746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

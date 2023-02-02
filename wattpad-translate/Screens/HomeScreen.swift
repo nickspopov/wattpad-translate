@@ -20,6 +20,15 @@ struct HomeScreen: View {
         wattpadSheetState = WattpadSheetState(link: self.searchLink)
     }
     
+    func checkSharedPrefToGetLink() {
+        let data = UserDefaults(suiteName: ConstantsService.groupName)?.string(forKey: ConstantsService.urlDefaultNameShareExtension)
+        
+        if let _data = data {
+            searchLink = _data
+            UserDefaults(suiteName: ConstantsService.groupName)?.removeObject(forKey: ConstantsService.urlDefaultNameShareExtension)
+        }
+    }
+    
     var body: some View {
         NavigationView{
             VStack {
@@ -32,7 +41,9 @@ struct HomeScreen: View {
                     WattpadReaderScreen(linkString: wattpadInfo.link)
                 }
             }
-        }.searchable(text: $searchLink)
+        }
+        .searchable(text: $searchLink)
+        .onAppear(perform: checkSharedPrefToGetLink)
     }
 }
 
