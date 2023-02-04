@@ -96,13 +96,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4B895D04298A659A00AFBD46 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		4B895D08298A889300AFBD46 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +131,6 @@
 				4BB28AD1298BFA4B00A45746 /* wattpad-translate.entitlements */,
 				4BB28AD0298BF78700A45746 /* Info.plist */,
 				4B895D08298A889300AFBD46 /* Screens */,
-				4B895D04298A659A00AFBD46 /* ViewModel */,
 				4BA426812989D26B004C1B0D /* Services */,
 				4BA426732989D219004C1B0D /* wattpad_translateApp.swift */,
 				4BA426752989D219004C1B0D /* ContentView.swift */,

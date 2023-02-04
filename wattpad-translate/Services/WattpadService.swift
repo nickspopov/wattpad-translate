@@ -67,7 +67,11 @@ class WattpadService {
             let doc = try SwiftSoup.parse(textHtml)
             let buttonContainer = try doc.getElementById("story-part-navigation")
             let link = try buttonContainer?.children()[0].attr("href")
-            completeHandler(link!, nil)
+            if let _link = link {
+                completeHandler(_link, nil)
+            } else {
+                completeHandler(nil, WattpadError.parseError)
+            }
         } catch {
             completeHandler(nil, WattpadError.parseError)
         }
